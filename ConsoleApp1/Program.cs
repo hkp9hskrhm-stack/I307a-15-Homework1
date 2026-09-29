@@ -1,8 +1,8 @@
 ﻿using Math = ConsoleApp1.Math;
 
-Console.WriteLine("Hello, World!");
+Console.Write("Enter count of numbers: ");
 
-int[] nums = [8, 5, 6, 7, 1, 9];
+int[] nums = Console.ReadLine().Split(',').Select(int.Parse).ToArray();
 
 Math clsMath = new Math();
 Console.WriteLine(clsMath.Sum(nums));
