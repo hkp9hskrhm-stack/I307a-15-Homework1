@@ -1,6 +1,6 @@
 namespace ConsoleApp1;
 
-public class Math
+public class MyMath
 {
     public double Sum(int[] numbers)
     {
