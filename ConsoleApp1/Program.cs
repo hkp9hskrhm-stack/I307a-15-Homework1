@@ -1,10 +1,11 @@
 ﻿using ConsoleApp1;
 
-Console.Write("Enter count of numbers: ");
+var gui = new GuiConsoleApp();
+var clsMath = new MyMath();
 
-int[] nums = Console.ReadLine().Split(',').Select(int.Parse).ToArray();
+double[] nums = { };
+nums = gui.GetArray(nums);
 
-MyMath clsMath = new MyMath();
 Console.WriteLine(clsMath.Sum(nums));
 Console.WriteLine(clsMath.Count(nums));
 Console.WriteLine(clsMath.Max(nums));

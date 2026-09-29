@@ -2,9 +2,9 @@ namespace ConsoleApp1;
 
 public class MyMath
 {
-    public double Sum(int[] numbers)
+    public double Sum(double[] numbers)
     {
-        var sum = 0;
+        double sum = 0;
         foreach (var num in numbers)
         {
             sum += num;
@@ -13,14 +13,14 @@ public class MyMath
         return sum;
     }
 
-    public double Count(int[] numbers)
+    public double Count(double[] numbers)
     {
         return numbers.Length;
     }
 
-    public double Max(int[] numbers)
+    public double Max(double[] numbers)
     {
-        var max = numbers[0];
+        double max = numbers[0];
         foreach (var num in numbers)
         {
             if (num > max)
@@ -32,9 +32,9 @@ public class MyMath
         return max;
     }
 
-    public double Min(int[] numbers)
+    public double Min(double[] numbers)
     {
-        var min = numbers[0];
+        double min = numbers[0];
         foreach (var num in numbers)
         {
             if (num < min)
