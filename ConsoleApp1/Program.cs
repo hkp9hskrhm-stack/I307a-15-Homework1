@@ -97,7 +97,7 @@ while (true)
     }
     if (action == "depercent")
     {
-        var percent = gui.GetShort("Enter number [0-100]");
+        var percent = gui.GetShort("Enter percent");
         var number = gui.GetDouble("Enter number");
         if (percent < 0 || percent > 100)
         {

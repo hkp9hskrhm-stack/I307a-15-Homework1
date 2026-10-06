@@ -18,7 +18,7 @@ internal class GuiConsoleApp
         if (input != null)
         {
             if (input == "0") return "exit";
-            return actions[int.Parse(input) - 1];
+            return actions[short.Parse(input) - 1];
         }
 
         return "";
