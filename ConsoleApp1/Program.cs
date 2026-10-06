@@ -10,7 +10,7 @@ string[] actions =
 ];
 
 gui.WriteActions(actions);
-while (true)
+while (true) //hi mohamed
 {
     string action = gui.GetAction(actions);
     if (action == "exit")
