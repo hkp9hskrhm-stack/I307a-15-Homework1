@@ -113,11 +113,49 @@ public class MyMath
 
     public double SquareRoot(double number)
     {
-        return Math.Sqrt(number);
+        if (number < 1) return number;
+
+        double start = 0;
+        double end = (number < 1) ? 1 : number;
+        double lastMid = 0;
+
+        while (true)
+        {
+            double mid = (start + end) / 2;
+            if (mid == lastMid) break;
+
+            if (mid * mid > number)
+                end = mid;
+            else
+                start = mid;
+
+            lastMid = mid;
+        }
+
+        return lastMid;
     }
 
     public double CubeRoot(double number)
     {
-        return Math.Cbrt(number);
+        if (number < 1) return number;
+
+        double start = 0;
+        double end = (number < 1) ? 1 : number;
+        double lastMid = 0;
+
+        while (true)
+        {
+            double mid = (start + end) / 2;
+            if (mid == lastMid) break;
+
+            if (mid * mid * mid > number)
+                end = mid;
+            else
+                start = mid;
+
+            lastMid = mid;
+        }
+
+        return lastMid;
     }
 }
