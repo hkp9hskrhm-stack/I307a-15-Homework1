@@ -101,6 +101,11 @@ public class MyMath
         return number * percent / 100;
     }
 
+    public double Abs(double number)
+    {
+        return (number < 0) ? -number : number;
+    }
+
     public double SquarePow(double number)
     {
         return number * number;
@@ -113,7 +118,7 @@ public class MyMath
 
     public double SquareRoot(double number)
     {
-        if (number < 1) return number;
+        if (number == 0 || number == 1) return number;
 
         double start = 0;
         double end = (number < 1) ? 1 : number;
@@ -137,8 +142,10 @@ public class MyMath
 
     public double CubeRoot(double number)
     {
-        if (number < 1) return number;
-
+        if (number == 0 || number == 1) return number;
+        bool negative = number < 0;
+        number = Abs(number);
+        
         double start = 0;
         double end = (number < 1) ? 1 : number;
         double lastMid = 0;
@@ -156,6 +163,6 @@ public class MyMath
             lastMid = mid;
         }
 
-        return lastMid;
+        return negative ? -lastMid : lastMid;
     }
 }
